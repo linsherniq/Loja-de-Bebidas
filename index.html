@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Minha Loja de Bebidas</title>
+</head>
+<body>
+  <header>
+    <h1>Minha Loja de Bebidas</h1>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="changeSection('home')">Home</a></li>
+        <li><a href="#" onclick="changeSection('produtos')">Produtos</a></li>
+        <li><a href="#" onclick="changeSection('contato')">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="secao-visivel">
+    <h2>Bem-vindo à nossa loja de bebidas</h2>
+    <p>Descubra a melhor seleção de bebidas para todos os gostos.</p>
+  </section>
+
+  <section id="produtos" class="secao-invisivel">
+    <article class="produto">
+      <img src="img/cerveja-heineken-lata-473ml1-8a25fcec114572f25916470112072561-1024-1024.jpg" alt="Descrição do Produto 1">
+      <h3>Cerveja Heineken</h3>
+      <p>Heineken é uma cerveja lager Puro Malte, refrescante e de cor amarelo-dourado, produzida com ingredientes 100% naturais: água, malte e lúpulo.</p>
+      <span class="preco">R$ 19,99</span>
+      <button onclick="adicionarAoCarrinho('Produto 1', 19.99)">Adicionar ao Carrinho</button>
+    </article>
+
+    <article class="produto">
+      <img src="img/refrigerante-coca-cola-original-garrafa-2l_2.webp" alt="Descrição do Produto 2">
+      <h3>Coca Cola</h3>
+      <p>Refrigerante elaborado a partir de água gaseíficada, açúcar, extrato de noz de cola e cafeína. Bebida não Alcoólica. Contém 350ml. Refrigerante Fabricado no Brasil.</p>
+      <span class="preco">R$ 24,99</span>
+      <button onclick="adicionarAoCarrinho('Produto 2', 24.99)">Adicionar ao Carrinho</button>
+    </article>
+
+    <article class="produto">
+        <img src="img/2316-thickbox_default.jpg" alt="Descrição do Produto 2">
+        <h3>Whisky Old Parr 750ml</h3>
+        <p>É um whisky com distinta oleosidade, seus aromas são predominantemente frutados, com notas cítricas e de caramelo. </p>
+        <span class="preco">R$ 160,99</span>
+        <button onclick="adicionarAoCarrinho('Produto 2', 24.99)">Adicionar ao Carrinho</button>
+      </article>
+
+    <!-- Adicione mais produtos conforme necessário -->
+  </section>
+
+  <section id="contato" class="secao-invisivel">
+    <h2>Entre em Contato</h2>
+    <p>Estamos aqui para ajudar. Entre em contato conosco para mais informações.</p>
+    <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensagem">Mensagem:</label>
+      <textarea id="mensagem" name="mensagem" rows="4" required></textarea>
+
+      <button type="button" onclick="enviarMensagem()">Enviar Mensagem</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Minha Loja de Bebidas. Todos os direitos reservados.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
